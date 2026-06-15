@@ -1,0 +1,23 @@
+# Sample Band agent credentials for SkillPath.
+# Copy this file to agent_config.yaml and replace the placeholders
+# with the real agent IDs and API keys from the Band platform.
+
+gap-analyst:
+  agent_id: "0b1c1793-f3e2-4577-8212-e215dcb7cce3"
+  api_key: "band_a_1781552143_l4DlLrA9PEA4FKt1VoGSBMyv5W-GbGZ2"
+
+curriculum-architect:
+  agent_id: "41595447-9dc2-47e4-be0f-baeaacc55549"
+  api_key: "band_a_1781552212_hMdYOgSgK3eOQggOL7wFL9MCQ5jq7mO3"
+
+coach-agent:
+  agent_id: "ab4dc2c3-98c2-4235-bc3f-f71e519ad8e7"
+  api_key: "band_a_1781552254_aA32TCkQiau4_6cxLBovnwXXtfNKn_v_"
+
+progress-tracker:
+  agent_id: "80f1a957-91e1-4f47-aa8a-495268b53437"
+  api_key: "band_a_1781552312_lS39jza4PQuubZtrDRtsXx2nuSP5I7-6"
+
+hr-reporter:
+  agent_id: "becb39b2-bd98-4f39-8ab6-dc1d5219201f"
+  api_key: "band_a_1781552358_0upPvddF6TKQINN1ztjUc-Idy2X2bs9r"

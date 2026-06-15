@@ -1,0 +1,32 @@
+{
+  "report_title": "SkillPath Workforce Reskilling Programme \u2014 Progress Report",
+  "report_date": "2026-06-16",
+  "executive_summary": "The SkillPath programme enrolled 5 employees across 5 target roles. 5 employees are progressing on schedule. 0 employees require additional support and coaching intervention.",
+  "key_metrics": {
+    "total_employees_enrolled": 5,
+    "on_track_percentage": 100.0,
+    "average_skill_gaps_per_employee": 4,
+    "estimated_completion_weeks": 12
+  },
+  "department_breakdown": [],
+  "recommendations": [
+    "Increase coaching frequency for at-risk employees to bi-weekly",
+    "Consider peer-learning pairs for complex technical skills",
+    "Review learning resource quality in Phase 1 for low-engagement areas"
+  ],
+  "risks_and_mitigations": [
+    {
+      "risk": "Time constraints for learners",
+      "mitigation": "Offer micro-learning alternatives"
+    },
+    {
+      "risk": "Course quality variance",
+      "mitigation": "Standardise vetted resource library"
+    }
+  ],
+  "next_steps": [
+    "Schedule mid-programme review at week 6",
+    "Share report with department heads"
+  ],
+  "audit_hash": "sha256-demo-placeholder"
+}

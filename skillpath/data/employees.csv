@@ -1,0 +1,6 @@
+employee_id,name,email,current_role,target_role,current_skills,years_experience
+EMP001,Rahul Sharma,rahul@company.com,Junior Developer,Senior Developer,"Python,SQL,Git",2
+EMP002,Priya Patel,priya@company.com,Data Analyst,Data Scientist,"Excel,SQL,Tableau",3
+EMP003,Amit Kumar,amit@company.com,Marketing Executive,Digital Marketing Manager,"Social Media,Content Writing",4
+EMP004,Sneha Gupta,sneha@company.com,HR Executive,HR Business Partner,"Recruitment,Onboarding",3
+EMP005,Vikram Singh,vikram@company.com,Sales Executive,Sales Manager,"Cold Calling,CRM",5

@@ -1,0 +1,59 @@
+{
+  "roles": {
+    "Senior Developer": {
+      "required_skills": ["Python", "System Design", "Docker", "Kubernetes", "CI/CD", "Code Review", "SQL", "Git", "REST APIs", "Unit Testing"],
+      "nice_to_have": ["React", "AWS", "Kafka", "Redis"]
+    },
+    "Data Scientist": {
+      "required_skills": ["Python", "Machine Learning", "Statistics", "SQL", "Pandas", "Scikit-learn", "Data Visualization", "Feature Engineering"],
+      "nice_to_have": ["Deep Learning", "Spark", "MLflow", "Tableau"]
+    },
+    "Digital Marketing Manager": {
+      "required_skills": ["SEO", "Google Ads", "Analytics", "Content Strategy", "Email Marketing", "Social Media", "A/B Testing", "Budget Management"],
+      "nice_to_have": ["Marketing Automation", "Video Production", "Copywriting"]
+    },
+    "HR Business Partner": {
+      "required_skills": ["Employee Relations", "Performance Management", "Recruitment", "HR Analytics", "Compensation", "Labor Law", "Conflict Resolution"],
+      "nice_to_have": ["HRIS Systems", "Succession Planning", "Coaching"]
+    },
+    "Sales Manager": {
+      "required_skills": ["Team Leadership", "Sales Strategy", "CRM", "Forecasting", "Negotiation", "P&L Management", "Coaching", "Cold Calling"],
+      "nice_to_have": ["Salesforce", "Account Management", "B2B Sales"]
+    }
+  },
+  "learning_resources": {
+    "Python": {"course": "Python Bootcamp — Udemy", "platform": "Udemy", "duration_weeks": 4, "url": "https://udemy.com"},
+    "System Design": {"course": "System Design Interview — Educative", "platform": "Educative", "duration_weeks": 6, "url": "https://educative.io"},
+    "Docker": {"course": "Docker Mastery — Udemy", "platform": "Udemy", "duration_weeks": 3, "url": "https://udemy.com"},
+    "Kubernetes": {"course": "Kubernetes for Developers — Pluralsight", "platform": "Pluralsight", "duration_weeks": 4, "url": "https://pluralsight.com"},
+    "CI/CD": {"course": "CI/CD Pipelines — GitHub Actions", "platform": "YouTube", "duration_weeks": 2, "url": "https://youtube.com"},
+    "Code Review": {"course": "Effective Code Review Practices", "platform": "Internal", "duration_weeks": 2, "url": ""},
+    "REST APIs": {"course": "REST API Design — Coursera", "platform": "Coursera", "duration_weeks": 3, "url": "https://coursera.org"},
+    "Unit Testing": {"course": "Testing with pytest — Real Python", "platform": "Real Python", "duration_weeks": 2, "url": "https://realpython.com"},
+    "Machine Learning": {"course": "ML Specialization — Coursera", "platform": "Coursera", "duration_weeks": 10, "url": "https://coursera.org"},
+    "Statistics": {"course": "Statistics for Data Science — Khan Academy", "platform": "Khan Academy", "duration_weeks": 5, "url": "https://khanacademy.org"},
+    "Pandas": {"course": "Pandas Mastery — DataCamp", "platform": "DataCamp", "duration_weeks": 3, "url": "https://datacamp.com"},
+    "Scikit-learn": {"course": "ML with Scikit-learn — Coursera", "platform": "Coursera", "duration_weeks": 4, "url": "https://coursera.org"},
+    "Data Visualization": {"course": "Data Viz with Matplotlib/Seaborn", "platform": "Udemy", "duration_weeks": 3, "url": "https://udemy.com"},
+    "Feature Engineering": {"course": "Feature Engineering for ML — Kaggle", "platform": "Kaggle", "duration_weeks": 4, "url": "https://kaggle.com"},
+    "SEO": {"course": "SEO Fundamentals — SEMrush Academy", "platform": "SEMrush", "duration_weeks": 2, "url": "https://semrush.com"},
+    "Google Ads": {"course": "Google Ads Certification", "platform": "Google Skillshop", "duration_weeks": 3, "url": "https://skillshop.withgoogle.com"},
+    "Analytics": {"course": "Google Analytics 4 Certification", "platform": "Google", "duration_weeks": 2, "url": "https://analytics.google.com"},
+    "Content Strategy": {"course": "Content Marketing Strategy — HubSpot", "platform": "HubSpot", "duration_weeks": 3, "url": "https://hubspot.com"},
+    "Email Marketing": {"course": "Email Marketing Mastery — Mailchimp", "platform": "Mailchimp", "duration_weeks": 2, "url": "https://mailchimp.com"},
+    "A/B Testing": {"course": "Experimentation & A/B Testing — Udacity", "platform": "Udacity", "duration_weeks": 3, "url": "https://udacity.com"},
+    "Budget Management": {"course": "Marketing Budget Planning — LinkedIn Learning", "platform": "LinkedIn", "duration_weeks": 2, "url": "https://linkedin.com/learning"},
+    "Employee Relations": {"course": "Employee Relations Essentials — SHRM", "platform": "SHRM", "duration_weeks": 4, "url": "https://shrm.org"},
+    "Performance Management": {"course": "Performance Management — Coursera", "platform": "Coursera", "duration_weeks": 3, "url": "https://coursera.org"},
+    "HR Analytics": {"course": "People Analytics — Coursera", "platform": "Coursera", "duration_weeks": 4, "url": "https://coursera.org"},
+    "Compensation": {"course": "Compensation & Benefits — WorldatWork", "platform": "WorldatWork", "duration_weeks": 4, "url": "https://worldatwork.org"},
+    "Labor Law": {"course": "Employment Law Fundamentals", "platform": "Coursera", "duration_weeks": 5, "url": "https://coursera.org"},
+    "Conflict Resolution": {"course": "Workplace Conflict Resolution — LinkedIn", "platform": "LinkedIn", "duration_weeks": 2, "url": "https://linkedin.com/learning"},
+    "Team Leadership": {"course": "Leading Teams — Coursera", "platform": "Coursera", "duration_weeks": 4, "url": "https://coursera.org"},
+    "Sales Strategy": {"course": "Strategic Sales Management — Kellogg", "platform": "Coursera", "duration_weeks": 5, "url": "https://coursera.org"},
+    "Forecasting": {"course": "Sales Forecasting & Pipeline — Salesforce Trailhead", "platform": "Salesforce", "duration_weeks": 3, "url": "https://trailhead.salesforce.com"},
+    "Negotiation": {"course": "Negotiation Mastery — Harvard Online", "platform": "Harvard", "duration_weeks": 4, "url": "https://online.harvard.edu"},
+    "P&L Management": {"course": "Finance for Non-Finance Managers", "platform": "Coursera", "duration_weeks": 4, "url": "https://coursera.org"},
+    "Coaching": {"course": "Coaching Skills for Managers — LinkedIn", "platform": "LinkedIn", "duration_weeks": 3, "url": "https://linkedin.com/learning"}
+  }
+}

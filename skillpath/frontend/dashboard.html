@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillPath — HR Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: #f5f5f5; color: #222; }
+    header { background: #1a1a2e; color: #fff; padding: 1rem 2rem; display: flex; align-items: center; gap: 12px; }
+    header h1 { font-size: 20px; font-weight: 600; }
+    header span { font-size: 12px; background: #16213e; padding: 4px 10px; border-radius: 20px; color: #7dd3fc; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; padding: 24px; }
+    .card { background: #fff; border-radius: 12px; padding: 20px; border: 1px solid #e5e7eb; }
+    .card .num  { font-size: 36px; font-weight: 700; color: #1a1a2e; }
+    .card .lbl  { font-size: 13px; color: #6b7280; margin-top: 4px; }
+    .card .bar  { height: 6px; border-radius: 3px; background: #e5e7eb; margin-top: 12px; }
+    .card .fill { height: 100%; border-radius: 3px; background: #22c55e; transition: width 1s; }
+    .section { padding: 0 24px 24px; }
+    .section h2 { font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e5e7eb; }
+    th { background: #f9fafb; padding: 10px 16px; font-size: 12px; text-align: left; color: #6b7280; text-transform: uppercase; }
+    td { padding: 12px 16px; font-size: 14px; border-top: 1px solid #e5e7eb; }
+    .badge { padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; }
+    .on-track  { background: #dcfce7; color: #166534; }
+    .at-risk   { background: #fee2e2; color: #991b1b; }
+    .band-log  { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; font-family: monospace; font-size: 13px; line-height: 1.7; max-height: 300px; overflow-y: auto; }
+    .log-entry { padding: 4px 0; border-bottom: 1px solid #f3f4f6; }
+    .log-entry .agent { font-weight: 600; color: #4f46e5; }
+    .log-entry.handoff .agent { color: #059669; }
+    .log-entry.escalate .agent { color: #dc2626; }
+    .refresh-btn { margin: 0 24px 16px; padding: 8px 20px; background: #1a1a2e; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SkillPath HR Dashboard</h1>
+  <span>Band Multi-Agent System</span>
+</header>
+
+<div class="grid">
+  <div class="card">
+    <div class="num" id="total">5</div>
+    <div class="lbl">Employees enrolled</div>
+    <div class="bar"><div class="fill" id="enroll-fill" style="width:100%"></div></div>
+  </div>
+  <div class="card">
+    <div class="num" id="on-track">4</div>
+    <div class="lbl">On track this week</div>
+    <div class="bar"><div class="fill" id="track-fill" style="width:80%"></div></div>
+  </div>
+  <div class="card">
+    <div class="num" id="at-risk">1</div>
+    <div class="lbl">Need intervention</div>
+    <div class="bar"><div class="fill" style="width:20%; background:#ef4444"></div></div>
+  </div>
+  <div class="card">
+    <div class="num">12</div>
+    <div class="lbl">Programme weeks</div>
+    <div class="bar"><div class="fill" style="width:8%; background:#f59e0b"></div></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Employee Progress</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>Current Role</th>
+        <th>Target Role</th>
+        <th>Missing Skills</th>
+        <th>Week 1 Status</th>
+        <th>Coach Room</th>
+      </tr>
+    </thead>
+    <tbody id="emp-table">
+      <tr><td>Rahul Sharma</td><td>Junior Developer</td><td>Senior Developer</td><td>7</td><td><span class="badge on-track">On Track</span></td><td>coaching-EMP001</td></tr>
+      <tr><td>Priya Patel</td><td>Data Analyst</td><td>Data Scientist</td><td>5</td><td><span class="badge on-track">On Track</span></td><td>coaching-EMP002</td></tr>
+      <tr><td>Amit Kumar</td><td>Marketing Executive</td><td>Digital Marketing Manager</td><td>6</td><td><span class="badge at-risk">At Risk</span></td><td>coaching-EMP003</td></tr>
+      <tr><td>Sneha Gupta</td><td>HR Executive</td><td>HR Business Partner</td><td>4</td><td><span class="badge on-track">On Track</span></td><td>coaching-EMP004</td></tr>
+      <tr><td>Vikram Singh</td><td>Sales Executive</td><td>Sales Manager</td><td>5</td><td><span class="badge on-track">On Track</span></td><td>coaching-EMP005</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>Band Agent Activity Log</h2>
+  <button class="refresh-btn" onclick="addLog()">Simulate Agent Activity</button>
+  <div class="band-log" id="band-log">
+    <div class="log-entry"><span class="agent">[gap-analyst]</span> Starting skill gap analysis for 5 employees...</div>
+    <div class="log-entry"><span class="agent">[gap-analyst]</span> Rahul Sharma: HIGH gap — missing 7 skills for Senior Developer</div>
+    <div class="log-entry"><span class="agent">[gap-analyst]</span> Priya Patel: MEDIUM gap — missing 5 skills for Data Scientist</div>
+    <div class="log-entry handoff"><span class="agent">[gap-analyst → curriculum-architect]</span> Gap analysis complete. Handing off.</div>
+    <div class="log-entry"><span class="agent">[curriculum-architect]</span> Building personalised learning paths for 5 employees...</div>
+    <div class="log-entry"><span class="agent">[curriculum-architect]</span> Rahul Sharma: 12-week plan created (5 hrs/week)</div>
+    <div class="log-entry handoff"><span class="agent">[curriculum-architect → coach-agent]</span> Plans ready. Handing off.</div>
+    <div class="log-entry"><span class="agent">[coach-agent]</span> Opening coaching rooms for 5 employees...</div>
+    <div class="log-entry"><span class="agent">[coach-agent]</span> Coaching room opened for Rahul Sharma → coaching-EMP001</div>
+    <div class="log-entry"><span class="agent">[progress-tracker]</span> Monitoring 5 employees. Weekly check scheduled.</div>
+    <div class="log-entry escalate"><span class="agent">[progress-tracker → HR Manager]</span> ⚠️ ESCALATION: 1 employee at risk — EMP003 (Amit Kumar)</div>
+    <div class="log-entry handoff"><span class="agent">[progress-tracker → hr-reporter]</span> Progress report ready. Handing off.</div>
+    <div class="log-entry"><span class="agent">[hr-reporter]</span> Generating audit-ready HR report...</div>
+    <div class="log-entry"><span class="agent">[hr-reporter]</span> ✅ Report saved to output/hr_report_20260616.json</div>
+  </div>
+</div>
+
+<script>
+const extraLogs = [
+  { cls: "", text: '[coach-agent] Rahul Sharma replied: "Started Docker course, on chapter 3"' },
+  { cls: "handoff", text: '[coach-agent → progress-tracker] Progress update: EMP001 on_track=true' },
+  { cls: "", text: '[progress-tracker] EMP001 status updated: on_track' },
+  { cls: "", text: '[coach-agent] Sending check-in to Priya Patel...' },
+  { cls: "escalate", text: '[progress-tracker → HR Manager] Amit Kumar has not responded in 3 days. Intervention recommended.' },
+];
+let logIdx = 0;
+function addLog() {
+  if (logIdx >= extraLogs.length) { logIdx = 0; }
+  const l = extraLogs[logIdx++];
+  const log = document.getElementById("band-log");
+  const div = document.createElement("div");
+  div.className = "log-entry " + l.cls;
+  div.innerHTML = `<span class="agent">${l.text.match(/^\[.*?\]/)?.[0] || ""}</span>${l.text.replace(/^\[.*?\]\s*/, " ")}`;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+}
+</script>
+</body>
+</html>
